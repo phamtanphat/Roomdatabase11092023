@@ -8,7 +8,7 @@ import androidx.room.TypeConverters
 @Entity(tableName = "status")
 data class Status (
     @PrimaryKey(autoGenerate = true)
-    val id: Int,
+    val id: Int?,
     @TypeConverters(StatusConverter::class)
     val name: StatusEnum?
 )
