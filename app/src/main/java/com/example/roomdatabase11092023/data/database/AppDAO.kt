@@ -15,7 +15,7 @@ interface AppDAO {
     fun getListStatus(): List<Status>
 
     @Insert
-    fun addTask(task: Task): Long
+    fun insertTask(task: Task): Long
 
     @Insert
     fun addStatus(status: List<Status>): List<Long>

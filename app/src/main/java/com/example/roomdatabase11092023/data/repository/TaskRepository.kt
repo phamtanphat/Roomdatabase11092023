@@ -14,8 +14,7 @@ class TaskRepository (private var context: Context) {
         return appDao.getListTask()
     }
 
-    fun addTask(task: Task): Long {
-        return appDao.addTask(task)
+    fun insertTask(task: Task): Long {
+        return appDao.insertTask(task)
     }
-
 }

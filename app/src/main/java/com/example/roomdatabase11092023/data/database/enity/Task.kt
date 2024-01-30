@@ -10,7 +10,7 @@ data class Task (
     val id: Int?,
     @ColumnInfo(name = "id_status")
     val idStatus: Int?,
-    val name: String?,
+    val description: String?,
     @ColumnInfo(name = "start_date")
     val startDate: Long?,
     @ColumnInfo(name = "end_date")

@@ -14,9 +14,11 @@ data class Status (
 )
 
 enum class StatusEnum {
-    INVESTIGATE,
+    START,
     PROGRESS,
-    DONE
+    DONE;
+
+    fun getIndex(): Int = ordinal + 1
 }
 
 class StatusConverter {
