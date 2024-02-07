@@ -42,10 +42,10 @@ class MainViewModel: ViewModel() {
                 endDate = System.currentTimeMillis()
             )
 
-            Log.d("pphat", task.toString())
-//            taskRepository?.insertTask()?.let {
-//                listTaskLiveData.postValue(it)
-//            }
+            val rowId = taskRepository?.insertTask(task) ?: -1
+            if (rowId > -1) {
+                queryTasks()
+            }
         }
     }
 }

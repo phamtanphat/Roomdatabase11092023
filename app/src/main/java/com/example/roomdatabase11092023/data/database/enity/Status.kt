@@ -19,6 +19,14 @@ enum class StatusEnum {
     DONE;
 
     fun getIndex(): Int = ordinal + 1
+
+    fun getNameByIndex(index: Int): String {
+        return when (index) {
+            START.getIndex() -> START.name
+            PROGRESS.getIndex() -> PROGRESS.name
+            else -> DONE.name
+        }
+    }
 }
 
 class StatusConverter {
